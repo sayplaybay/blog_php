@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="thems/indexcss.css">
+<script type="text/javascript" src="../thems/jQuery.js"></script>
+
+
+<head>
+	<meta charset="UTF-8">
+	<title>Mr.Wang Blog</title>
+	<style>
+	          *{
+          /*清除原有的内外边距*/
+          margin:0;
+          padding:0;
+     }
+      body{
+          /*设置背景图片*/
+          background-image:url(images/bg.jpg);
+          /*设置不允许图片铺多张*/
+          background-repeat:no-repeat;
+          /*设置图片的尺寸为整个屏幕大小*/
+          background-size: cover;
+
+     }
+     #box{
+          width:200px;
+          height:200px;
+          background:rgba(0,0,0,0.5);
+          /*
+               margin值如果设置4个,是上, 右, 下, 左.
+               margin值如果设置两个, 是上下, 左右.
+               margin值如果是三个,是上, 左右, 下.
+          */
+          margin: 200px auto;
+          border:1px solid rgba(0,0,0,0.5);
+          transform-style:preserve-3d;
+          transform:rotatex(-60deg)
+          rotateY(60deg);
+          animation:donghua 10s
+          infinite linear;
+          -webkit-animation:donghua 10s
+          infinite;
+          -o-animatation:donghua 10s
+          infinite;
+          -ms-animation:donghua 10s
+          infinite;
+
+     }
+     /*清除列表的默认样式*/
+     ul li{
+          list-style: none;
+          width: 100px;
+          height: 100px;
+          /*绝对定位*/
+          position: absolute;
+     }
+     ul {
+          position: relative;
+          top: 50px;
+          left: 50px;
+                         /*打开3D视觉效果*/
+          transform-style:preserve-3d;
+
+     }
+     ul li:nth-child(1){
+
+          background-image:url(images/01.png);
+          transform:translateZ(50px);
+
+     }
+     ul li:nth-child(2){
+
+          background-image:url(images/02.png);
+          transform:rotateY(90deg)
+          translateZ(50px);
+
+     }
+     ul li:nth-child(3){
+
+          background-image:url(images/03.png);
+          transform:rotateY(180deg)
+          translateZ(50px);
+     }
+     ul li:nth-child(4){
+
+          background-image:url(images/04.png);
+          transform:rotateY(270deg)
+          translateZ(50px);
+     }
+     ul li:nth-child(5){
+
+          background-image:url(images/05.png);
+     transform:rotateX(90deg)
+          translateZ(50px);
+     }
+     ul li:nth-child(6){
+
+          background-image:url(images/06.png);
+          transform:rotateX(-90deg)
+          translateZ(50px);
+     }
+     ol {
+          transform-style:preserve-3d;
+     }
+     ol li{
+          list-style:none;
+          width:200px;
+          height:200px;
+          position:absolute;
+          
+          transition:all 3s;
+     }
+     
+
+     
+     ol li:nth-child(1){
+transform:translateZ(100px);
+     }
+     ol li:nth-child(2){
+transform:rotateY(90deg)
+          translateZ(100px);
+
+     }
+     ol li:nth-child(3){
+transform:rotateY(180deg)
+          translateZ(100px);
+     }
+     ol li:nth-child(4){
+transform:rotateY(270deg)
+          translateZ(100px);
+     }
+     ol li:nth-child(5){
+transform:rotateX(90deg)
+          translateZ(100px);
+     }
+     ol li:nth-child(6){
+    transform:rotateX(-90deg)
+          translateZ(100px);
+     }
+     /*鼠标移动到立方体上时，展开外层的立方体的各个面*/
+     #box:hover ol li:nth-child(1){
+transform:translateZ(200px);
+     }
+     #box:hover ol li:nth-child(2){
+transform:rotateY(90deg)
+          translateZ(200px);
+     }
+     #box:hover ol li:nth-child(3){
+transform:rotateY(180deg)
+          translateZ(200px);
+     }
+     #box:hover ol li:nth-child(4){
+transform:rotateY(270deg)
+          translateZ(200px);
+     }
+     #box:hover ol li:nth-child(5){
+transform:rotateX(90deg)
+          translateZ(200px);
+     }
+     #box:hover ol li:nth-child(6){
+ transform:rotateX(-90deg)
+          translateZ(200px);
+     }
+     @keyframes donghua{
+          0%{
+               transform:rotatex(-60deg)
+          rotateY(60deg)rotateZ(0deg);
+
+               }100%{transform:rotatex(300deg)
+          rotateY(420deg)rotateZ(360deg);
+
+               }
+     }
+     .wec{
+          color: white;
+          margin-left:36%;
+     }
+     .left{
+          width: 25%;
+          height: 450px;
+          
+          float: left;
+          margin-top: 100px;
+          margin-left:5%; 
+          color: white;
+     }
+     .right{
+          width: 25%;
+          height: 450px;
+       
+          float: right;
+          margin-top: 100px;
+          margin-right:5%; 
+          color: white;
+     }
+     .goblog{
+          color: white;
+          margin-top: 40px;
+          margin-left:45%;
+     }
+
+	</style>
+</head>
+<body>
+     <div class="wec"><h1>欢迎来到Mr.Wang的博客<h1></div>
+     <div class="goblog"><a href="index2.php"><h2>进入博客</h2></a></div>
+     <div class="left">
+          <h2>博客介绍:</h2>
+          <p>首先感谢您进入本人的博客，本博客是为分享互联网技术而建立，本人也在学习成为全栈（我的梦想！！），以后会给大家分享自己的进步经验和有价值的文章。涉及领域：php、web前端、js开发、seo优化、后台建设、网站网页logo设计、服务器、域名、环境搭建等。</p>
+                <br>
+          <p>本博客系统所用技术：PHP，Js(jQ)，bootstrap,html,css3,mysql(mysqli扩展),Linux服务器Apache环境等</p>
+          <br>
+          <p>虽然看着非主流（毕竟不是专业的UI），但是前端后台都是纯手工打造。</p>
+
+         
+     </div>
+     <div class="right">
+          <h2>个人介绍:</h2>
+          <br>
+          <p>姓名：★★★(鼠标擦开就显示了)</p>
+          <br>
+          <p>性别：男</p>
+          <br>
+          <p>目前所在地：上海</p>
+          <br>
+          <p>工作：......</p>
+          <br>
+          <p>爱好：读书，读书，读书，敲代码，看日剧</p>
+          <br>
+          <p>微信公众号：半仙儿lamp+（banxian9465）</p>
+          <br>
+          <p>GitHub用户名：sayplaybay</p>
+     </div>
+     <div id="box">
+
+     	<ul>
+          	<li></li>
+          	<li></li>
+          	<li></li>
+          	<li></li>
+          	<li></li>
+          	<li></li>
+     	</ul>
+     	<ol>
+     		<li class="img1"><img src="images/wang1.png" width="200px" height="200px" alt=""></li>
+     		<li class="img2"><img src="images/wang2.png" width="200px" height="200px" alt=""></li>
+     		<li class="img3"><img src="images/wang3.png" width="200px" height="200px" alt=""></li>
+     		<li class="img4"><img src="images/wang4.png" width="200px" height="200px" alt=""></li>
+     		<li class="img5"><img src="images/wang5.png" width="200px" height="200px" alt=""></li>
+     		<li class="img6"><img src="images/wang6.png" width="200px" height="200px" alt=""></li>
+     	</ol>
+
+     </div>
+     
+
+
+</body>
+</html>
